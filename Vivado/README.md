@@ -296,3 +296,29 @@ Matches                          = 99,600
 Mismatches                       = 0
 Matching percentage              = 100.00%
 ~~~
+
+
+## Input Image Used
+
+The project uses **newdog.jpeg** as the input image for the demonstrated 2-D 5/3 DWT implementation.
+
+The image is converted to grayscale without resizing. Its dimensions are **300 × 332**, giving **99,600 input pixels**. MATLAB converts the grayscale image into row-major hexadecimal data in \`input_image.hex\`.
+
+The same \`input_image.hex\` file is loaded by \`DWTarc.v\` using \`$readmemh\` and is therefore the input data processed by the Vivado DWT architecture.
+
+~~~text
+Input Image
+newdog.jpeg
+     |
+     v
+MATLAB DWT reference / HEX generation
+     |
+     v
+input_image.hex
+     |
+     v
+DWTarc.v
+     |
+     v
+2-D 5/3 DWT
+~~~
